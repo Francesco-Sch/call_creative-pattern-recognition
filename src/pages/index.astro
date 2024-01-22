@@ -7,6 +7,26 @@ import "sanitize.css";
 import "../styles/index.scss";
 ---
 
+<script>
+	console.log("Welcome, browser console!");
+
+	const participants = [
+		"artist",
+		"designer",
+		"researcher",
+		"critical thinker",
+		"scientist",
+		"hacker",
+	];
+	let currentIndex = 0;
+
+	setInterval(() => {
+		const participant = participants[currentIndex];
+		document.getElementById("participants").innerHTML = participant;
+		currentIndex = (currentIndex + 1) % participants.length;
+	}, 1500);
+</script>
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -23,7 +43,7 @@ import "../styles/index.scss";
 			<div class="content__section">
 				<div class="content__section-text">
 					<p class="mobile-indent">
-						Dear artist/designer/researcher/critical thinker/scientist
+						Dear <span id="participants">participant</span>,
 					</p>
 					<p>
 						Creative Pattern Recognition is a publication and platform on
