@@ -10,6 +10,9 @@ dependencies:
     version: 4.2.1(sass@1.70.0)
 
 devDependencies:
+  '@fontsource-variable/stix-two-text':
+    specifier: ^5.0.19
+    version: 5.0.19
   sanitize.css:
     specifier: ^13.0.0
     version: 13.0.0
@@ -511,6 +514,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/stix-two-text@5.0.19:
+    resolution: {integrity: sha512-grbHTPCAggddNI9FCLeYyxcxngxf8SyNgWf2ObHapBm3QK7Q6nnYP0Ta4sV/dmIwyOD0ovNh3pePhpECuH0i2g==}
+    dev: true
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}

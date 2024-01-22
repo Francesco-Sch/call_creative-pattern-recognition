@@ -13,6 +13,7 @@
     "astro": "^4.2.1"
   },
   "devDependencies": {
+    "@fontsource-variable/stix-two-text": "^5.0.19",
     "sanitize.css": "^13.0.0",
     "sass": "^1.70.0"
   }
