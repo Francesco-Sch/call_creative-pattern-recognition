@@ -10,11 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource-variable/cormorant": "^5.0.9",
     "astro": "^4.2.1"
   },
   "devDependencies": {
-    "@fontsource-variable/stix-two-text": "^5.0.19",
+    "@fontsource/crimson-text": "^5.0.8",
     "sanitize.css": "^13.0.0",
     "sass": "^1.70.0"
   }
