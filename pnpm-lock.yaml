@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource-variable/cormorant':
+    specifier: ^5.0.9
+    version: 5.0.9
   astro:
     specifier: ^4.2.1
     version: 4.2.1(sass@1.70.0)
@@ -514,6 +517,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/cormorant@5.0.9:
+    resolution: {integrity: sha512-fdzHLp5BNL5dkpeV90k2R0XJ7y7yy1tSIjtrJBkgL6SOdvomv53oGQv6+pwX9YKaqn9bBercHCVSpPZjMVywIg==}
+    dev: false
 
   /@fontsource-variable/stix-two-text@5.0.19:
     resolution: {integrity: sha512-grbHTPCAggddNI9FCLeYyxcxngxf8SyNgWf2ObHapBm3QK7Q6nnYP0Ta4sV/dmIwyOD0ovNh3pePhpECuH0i2g==}

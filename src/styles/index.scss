@@ -1,19 +1,108 @@
+@import "_breakpoints.scss";
 @import "_global.scss";
 
 body {
 	display: flex;
-	min-width: max-content;
-	min-height: max-content;
+	overflow-y: auto;
+	flex-direction: column;
+
+	@include breakpoint(md) {
+		flex-direction: row;
+	}
 }
 .p5-wrapper {
-	width: 40vw;
-	height: 100vh;
+	min-width: 25vw;
+	height: 50vh;
 	background-color: blue;
-	flex-grow: 1;
+
+	@include breakpoint(md) {
+		height: 100vh;
+	}
+
+	@include breakpoint(lg) {
+		min-width: 40vw;
+	}
 }
 
 .content {
-	width: 60vw;
+	overflow-y: auto;
 	height: auto;
 	padding: 1rem;
+
+	@include breakpoint(md) {
+		height: 100vh;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	&__title {
+		font-size: 1.5rem;
+		line-height: 1;
+		margin: 0 0 5rem 0;
+	}
+
+	&__section {
+		margin-top: 1.75rem;
+
+		@include breakpoint(md) {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+
+		&-title {
+			flex-grow: 1;
+			h2 {
+				margin: 0;
+				font-weight: 600;
+			}
+		}
+
+		&-text {
+			width: 100%;
+			line-height: 1.375;
+			text-indent: 2rem;
+			hyphens: auto;
+			text-align: justify;
+			text-align-last: none;
+
+			@include breakpoint(sm) {
+				width: 70%;
+			}
+
+			ul {
+				list-style: none;
+				padding-left: 1rem;
+				margin: 1rem 0 1rem 0;
+
+				li {
+					padding-left: 0rem;
+					text-indent: -1rem;
+
+					&:before {
+						content: "-";
+						padding-right: 7.5px;
+					}
+				}
+			}
+		}
+
+		.no-indent {
+			text-indent: 0;
+		}
+
+		.mobile-indent {
+			text-indent: 2rem;
+
+			@include breakpoint(md) {
+				text-indent: 0;
+			}
+		}
+
+		.mt-1 {
+			margin-top: 1rem;
+		}
+	}
 }

@@ -1,0 +1,27 @@
+$breakpoint-sm: 600px;
+$breakpoint-md: 900px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1800px;
+
+// Create a mixin to use in your media queries
+@mixin breakpoint($point) {
+	@if $point == sm {
+		@media (min-width: $breakpoint-sm) {
+			@content;
+		}
+	} @else if $point == md {
+		@media (min-width: $breakpoint-md) {
+			@content;
+		}
+	} @else if $point == lg {
+		@media (min-width: $breakpoint-lg) {
+			@content;
+		}
+	} @else if $point == xl {
+		@media (min-width: $breakpoint-xl) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
