@@ -10,10 +10,10 @@ body {
 		flex-direction: row;
 	}
 }
-.p5-wrapper {
+#p5-wrapper {
 	min-width: 25vw;
 	height: 50vh;
-	background-color: blue;
+	background-color: transparent;
 
 	@include breakpoint(md) {
 		height: 100vh;
