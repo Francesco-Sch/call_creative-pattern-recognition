@@ -1,0 +1,34 @@
+name: Deploy website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: 🚧 Install, build, and upload your site output
+        uses: withastro/action@v1
+        with:
+          node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
+
+      - name: 📂 Sync website
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist
+          server-dir: /calls/creative-pattern-recognition/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            README.md
