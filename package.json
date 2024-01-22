@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "astro": "^4.2.1"
+  },
+  "devDependencies": {
+    "sanitize.css": "^13.0.0"
   }
 }
