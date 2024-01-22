@@ -1,0 +1,17 @@
+body {
+	display: flex;
+	min-width: max-content;
+	min-height: max-content;
+}
+.p5-wrapper {
+	width: 40vw;
+	height: 100vh;
+	background-color: blue;
+	flex-grow: 1;
+}
+
+.content {
+	width: 60vw;
+	height: auto;
+	padding: 1rem;
+}
