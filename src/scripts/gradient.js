@@ -16,8 +16,18 @@ const s = (sketch) => {
 		sketch.background(281, 70, 85);
 
 		// Calculate the position of the center of the largest square based on mouse position
-		let centerX = sketch.mouseX;
-		let centerY = sketch.mouseY;
+		let centerX = sketch.width / 2;
+		let centerY = sketch.height / 2;
+
+		if (
+			sketch.mouseX >= 0 &&
+			sketch.mouseX <= sketch.width &&
+			sketch.mouseY >= 0 &&
+			sketch.mouseY <= sketch.height
+		) {
+			centerX = sketch.mouseX;
+			centerY = sketch.mouseY;
+		}
 
 		// Draw the rest of the grid with smaller and darker squares
 		for (let x = 0; x < sketch.windowWidth + 1; x += gridSize / 1.15) {
